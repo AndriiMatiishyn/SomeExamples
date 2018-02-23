@@ -1,0 +1,38 @@
+﻿<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>To Do List</title>
+
+</head>
+<body>
+
+	<h1> To Do List </h1>
+
+	<ul id="list">
+		<li>
+		WakeUp
+		<button id="b2">X</button>
+		</li>
+		<li>
+		Write smt
+		<button id="b2">X</button>
+		</li>
+	</ul>
+
+	<button id="b1">ADD</button>
+	<script type="text/javascript">
+		b1.onclick = function addition() {
+			var newLi = document.createElement('li');
+			  newLi.innerHTML = Math.random() + '<button id="b2">X</button>';
+
+			  list.appendChild(newLi);
+		};
+
+		b2.onclick = function deleteLi() {
+			this.remove(list);
+		}
+		
+	</script>
+</body>
+</html>

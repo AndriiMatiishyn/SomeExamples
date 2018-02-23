@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Timer</title>
+</head>
+<body>
+
+<div id="timer">Some Text</div>
+
+
+
+<script type="text/javascript">
+  
+  var t = document.getElementById('timer');
+
+ 
+
+  function getTime() {
+    var now = new Date();
+    var h = now.getHours();
+    var m = now.getMinutes();
+    var s = now.getSeconds();
+    return (h + ':' + m + ':' + s)
+  }
+
+
+  function insertTime() {
+    t.innerHTML = getTime();
+  }
+
+  insertTime();
+  
+  var timerId = setInterval( insertTime, 1000);
+
+
+</script>
+</body>
+</html>
